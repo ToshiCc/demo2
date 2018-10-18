@@ -12,6 +12,7 @@ public class HelloController2 {
     @RequestMapping("/check")
     public String hello(Model m) {
         m.addAttribute("now", DateFormat.getDateTimeInstance().format(new Date()));
+        System.out.println();
         return "hello.jsp";
     }
 }
