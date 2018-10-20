@@ -10,9 +10,11 @@ import java.util.Date;
 @Controller
 public class HelloController2 {
     @RequestMapping("/check")
-    public String hello(Model m) {
+    public String hello(Model m)throws Exception {
         m.addAttribute("now", DateFormat.getDateTimeInstance().format(new Date()));
-        System.out.println();
+        if(true){
+            throw new Exception("some exception");
+        }
         return "hello.jsp";
     }
 }
